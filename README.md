@@ -154,10 +154,10 @@ A modern, responsive web application for managing inventory items with image sup
 
 ##  Browser Support
 
-- ✅ Chrome 60+
-- ✅ Firefox 55+
-- ✅ Safari 12+
-- ✅ Edge 79+
+-  Chrome 60+
+-  Firefox 55+
+-  Safari 12+
+-  Edge 79+
 
 ##  Contributing
 
