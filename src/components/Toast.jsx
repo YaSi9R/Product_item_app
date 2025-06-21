@@ -7,7 +7,7 @@ const Toast = ({ message, type = "success", isVisible, onClose }) => {
     if (isVisible) {
       const timer = setTimeout(() => {
         onClose()
-      }, 4000) // Increased to 4 seconds for better visibility
+      }, 4000)
       return () => clearTimeout(timer)
     }
   }, [isVisible, onClose])

@@ -1,9 +1,7 @@
-/* Tailwind base styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* You can add any global overrides below */
 html,
 body {
   @apply bg-gray-50 text-gray-900;

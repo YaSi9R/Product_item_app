@@ -28,7 +28,6 @@ const AddItems = ({ onAddItem, showToast }) => {
     }))
   }
 
-  // Convert file to base64
   const fileToBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader()
@@ -38,7 +37,6 @@ const AddItems = ({ onAddItem, showToast }) => {
     })
   }
 
-  // Handle cover image upload
   const handleCoverImageUpload = async (e) => {
     const file = e.target.files[0]
     if (file) {
@@ -54,7 +52,6 @@ const AddItems = ({ onAddItem, showToast }) => {
     }
   }
 
-  // Handle additional images upload
   const handleAdditionalImageUpload = async (e) => {
     const file = e.target.files[0]
     if (file) {
@@ -76,7 +73,6 @@ const AddItems = ({ onAddItem, showToast }) => {
     }
   }
 
-  // Remove additional image
   const removeAdditionalImage = (index) => {
     setFormData((prev) => ({
       ...prev,
@@ -89,7 +85,6 @@ const AddItems = ({ onAddItem, showToast }) => {
     showToast("Image removed successfully!", "success")
   }
 
-  // Remove cover image
   const removeCoverImage = () => {
     setFormData((prev) => ({ ...prev, coverImage: "" }))
     setImagePreview((prev) => ({ ...prev, cover: "" }))
@@ -107,7 +102,6 @@ const AddItems = ({ onAddItem, showToast }) => {
     setIsSubmitting(true)
 
     try {
-      // Simulate processing delay
       await new Promise((resolve) => setTimeout(resolve, 1000))
 
       const newItem = {
@@ -117,7 +111,6 @@ const AddItems = ({ onAddItem, showToast }) => {
 
       onAddItem(newItem)
 
-      // Reset form
       setFormData({
         name: "",
         type: "",
@@ -136,7 +129,6 @@ const AddItems = ({ onAddItem, showToast }) => {
     }
   }
 
-  // Generate placeholder base64 image
   const generatePlaceholderBase64 = (text) => {
     const canvas = document.createElement("canvas")
     canvas.width = 300
@@ -160,7 +152,6 @@ const AddItems = ({ onAddItem, showToast }) => {
 
       <div className="max-w-2xl mx-auto">
         <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6 space-y-6">
-          {/* Item Name */}
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
               Item Name *
@@ -177,7 +168,6 @@ const AddItems = ({ onAddItem, showToast }) => {
             />
           </div>
 
-          {/* Item Type */}
           <div>
             <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-2">
               Item Type *
@@ -199,7 +189,6 @@ const AddItems = ({ onAddItem, showToast }) => {
             </select>
           </div>
 
-          {/* Item Description */}
           <div>
             <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
               Item Description *
@@ -216,7 +205,6 @@ const AddItems = ({ onAddItem, showToast }) => {
             />
           </div>
 
-          {/* Cover Image Upload */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Cover Image</label>
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
@@ -268,11 +256,9 @@ const AddItems = ({ onAddItem, showToast }) => {
             </div>
           </div>
 
-          {/* Additional Images */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Additional Images</label>
 
-            {/* Display uploaded additional images */}
             {imagePreview.additional.length > 0 && (
               <div className="grid grid-cols-2 gap-4 mb-4">
                 {imagePreview.additional.map((image, index) => (
@@ -294,7 +280,6 @@ const AddItems = ({ onAddItem, showToast }) => {
               </div>
             )}
 
-            {/* Upload button for additional images */}
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
               <div className="text-center">
                 <label htmlFor="additional-upload" className="cursor-pointer">
@@ -316,7 +301,6 @@ const AddItems = ({ onAddItem, showToast }) => {
             </div>
           </div>
 
-          {/* Submit Button */}
           <div className="pt-4">
             <button
               type="submit"

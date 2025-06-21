@@ -5,7 +5,6 @@ import { useState } from "react"
 const ItemModal = ({ item, onClose, showToast }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  // Combine cover image with additional images for carousel
   const allImages = [item.coverImage, ...item.additionalImages].filter((img) => img)
 
   const nextImage = () => {
@@ -17,22 +16,18 @@ const ItemModal = ({ item, onClose, showToast }) => {
   }
 
   const handleEnquire = () => {
-    // Close the modal first
     onClose()
 
-    // Show toast message after a short delay to ensure modal is closed
     setTimeout(() => {
       showToast(`Enquiry sent for "${item.name}"! We'll get back to you soon.`, "success")
     }, 100)
 
-    // Here you could implement email functionality
     console.log(`Enquiry for item: ${item.name}`)
   }
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-        {/* Header */}
         <div className="flex justify-between items-center p-6 border-b">
           <h2 className="text-2xl font-bold text-gray-900">{item.name}</h2>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-2xl font-bold">
@@ -40,10 +35,8 @@ const ItemModal = ({ item, onClose, showToast }) => {
           </button>
         </div>
 
-        {/* Content */}
         <div className="p-6">
           <div className="grid md:grid-cols-2 gap-6">
-            {/* Image Carousel */}
             <div className="space-y-4">
               <div className="relative">
                 <img
@@ -70,7 +63,6 @@ const ItemModal = ({ item, onClose, showToast }) => {
                 )}
               </div>
 
-              {/* Image indicators */}
               {allImages.length > 1 && (
                 <div className="flex justify-center space-x-2">
                   {allImages.map((_, index) => (
@@ -92,7 +84,6 @@ const ItemModal = ({ item, onClose, showToast }) => {
               )}
             </div>
 
-            {/* Item Details */}
             <div className="space-y-4">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Item Type</h3>
@@ -106,7 +97,6 @@ const ItemModal = ({ item, onClose, showToast }) => {
                 <p className="text-gray-700 leading-relaxed">{item.description}</p>
               </div>
 
-              {/* Enquire Button */}
               <div className="pt-4">
                 <button
                   onClick={handleEnquire}
