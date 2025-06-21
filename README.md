@@ -2,7 +2,7 @@
 
 A modern, responsive web application for managing inventory items with image support and local storage persistence.
 
-## 🚀 Features
+##  Features
 
 ### Core Functionality
 - **Two Main Pages**: View Items and Add Items
@@ -20,7 +20,7 @@ A modern, responsive web application for managing inventory items with image sup
 - **Loading States**: Smooth loading indicators
 - **Error Handling**: Graceful fallbacks for failed operations
 
-## 🛠️ Technologies Used
+## 🛠 Technologies Used
 
 - **React.js** - Frontend framework
 - **JavaScript (ES6+)** - Programming language
@@ -29,9 +29,9 @@ A modern, responsive web application for managing inventory items with image sup
 - **Local Storage API** - Data persistence
 - **File Reader API** - Image processing
 
-## 📋 Requirements Fulfilled
+##  Requirements Fulfilled
 
-### ✅ Add Items Page
+###  Add Items Page
 - Form with all required fields:
   - Item Name (required)
   - Item Type (dropdown: Shirt, Pant, Shoes, Sports Gear, Accessories, Other)
@@ -41,14 +41,14 @@ A modern, responsive web application for managing inventory items with image sup
 - Success message: "Item successfully added"
 - Automatic redirect to View Items page after adding
 
-### ✅ View Items Page
+###  View Items Page
 - Displays all items with name and cover image
 - Starts with 3 static demo items with professional images
 - Shows newly added items immediately
 - Responsive grid layout
 - Click any item to open detailed modal
 
-### ✅ Item Details Modal
+###  Item Details Modal
 - Shows all item information
 - Image carousel with navigation arrows
 - Thumbnail indicators
@@ -56,7 +56,7 @@ A modern, responsive web application for managing inventory items with image sup
 - "Enquire" button with success notification
 - Modal closes automatically after enquiry
 
-### 🎯 Bonus Features Implemented
+###  Bonus Features Implemented
 - **Image Upload from PC**: Real file upload with preview
 - **Toast Notifications**: Professional notification system
 - **Responsive Design**: Works on all screen sizes
@@ -64,7 +64,7 @@ A modern, responsive web application for managing inventory items with image sup
 - **Error Handling**: Graceful error management
 - **Data Persistence**: Items survive page refresh
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Modern web browser (Chrome, Firefox, Safari, Edge)
@@ -82,7 +82,7 @@ A modern, responsive web application for managing inventory items with image sup
 4. **View Details**: Click any item card to see full details
 5. **Make Enquiries**: Click "Enquire" button in item details
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ├── app.jsx                 # Main application component
@@ -97,7 +97,7 @@ A modern, responsive web application for managing inventory items with image sup
 └── README.md               # This file
 ```
 
-## 🎨 Design Features
+##  Design Features
 
 - **Clean Interface**: Modern, professional design
 - **Intuitive Navigation**: Easy switching between pages
@@ -106,14 +106,14 @@ A modern, responsive web application for managing inventory items with image sup
 - **Responsive Grid**: Adapts to different screen sizes
 - **Professional Typography**: Clean, readable fonts
 
-## 💾 Data Storage
+##  Data Storage
 
 - **Local Storage**: All data stored in browser's localStorage
 - **Base64 Images**: Images converted to base64 for storage
 - **Persistent Data**: Items survive browser refresh/restart
 - **Quota Management**: Handles storage limits gracefully
 
-## 🔧 Technical Implementation
+##  Technical Implementation
 
 ### Image Handling
 - File upload with drag-and-drop styling
@@ -134,14 +134,14 @@ A modern, responsive web application for managing inventory items with image sup
 - Touch-friendly interactions
 - Optimized for all screen sizes
 
-## 🐛 Known Limitations
+##  Known Limitations
 
 - **Storage Limit**: Browser localStorage has ~5MB limit
 - **Image Size**: Large images may hit storage limits
 - **Browser Dependency**: Data tied to specific browser
 - **No Cloud Sync**: Data doesn't sync across devices
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 
 - **Database Integration**: Connect to real database
 - **Email Functionality**: Send actual emails for enquiries
@@ -152,14 +152,14 @@ A modern, responsive web application for managing inventory items with image sup
 - **Image Compression**: Reduce storage usage
 - **Drag & Drop**: Drag and drop image uploads
 
-## 📱 Browser Support
+##  Browser Support
 
 - ✅ Chrome 60+
 - ✅ Firefox 55+
 - ✅ Safari 12+
 - ✅ Edge 79+
 
-## 🤝 Contributing
+##  Contributing
 
 This is an assignment project. For improvements or suggestions:
 1. Fork the repository
@@ -167,11 +167,11 @@ This is an assignment project. For improvements or suggestions:
 3. Make your changes
 4. Submit a pull request
 
-## 📄 License
+##  License
 
 This project is created for educational purposes as part of a coding assignment.
 
-## 👨‍💻 Author
+##  Author
 
 Created as part of a web development assignment demonstrating:
 - React.js proficiency
